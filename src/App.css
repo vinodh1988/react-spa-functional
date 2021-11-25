@@ -2,3 +2,13 @@ h1{
   background-color: yellow;
   color: green;
 }
+
+.box{
+  float: left;
+  height: 200px;
+  width: 250px;
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(80, 63, 192);
+  color: white;
+}
