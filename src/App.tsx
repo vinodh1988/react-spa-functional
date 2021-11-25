@@ -6,9 +6,9 @@ const App=()=>{
     <div>
       <h1>React World!!! Welcome</h1>
       <br/>
-      <Box></Box>
-      <Box></Box>
-      <Box></Box>
+      <Box title="Fruits"></Box>
+      <Box title="Vegetables"></Box>
+      <Box title="Gadgets"></Box>
     </div>
   )
 }

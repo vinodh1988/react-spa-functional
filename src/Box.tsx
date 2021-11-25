@@ -1,8 +1,11 @@
+type boxprops={
+    title:string
+}
 
-const Box=()=>{
+const Box=({title}: boxprops)=>{
     return(
         <div className="box">
-            <h3>Dummy Title</h3>
+            <h3>{title}</h3>
         </div>
     )
 }
