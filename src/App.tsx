@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css'
 import Box from './Box';
 import StyleForm from './ReactComponents/StyleForm';
+import WeatherDataComponent from './ReactComponents/WeatherData';
 
 const App=()=>{
   
@@ -15,6 +16,7 @@ const App=()=>{
   const [button1,setButton1]=useState("btn btn-danger")
   const [button2,setButton2]=useState("btn btn-ligh")
   const [theme,setTheme]=useState("container1")
+  const [city,setCity]=useState("Chennai")
   return (
     <div>
       <h1>React World</h1>
@@ -35,9 +37,20 @@ const App=()=>{
       
     
     </div>
-    <div style={{overflow: "hidden" , margin:"20px"}}>
+    <div style={{overflow: "hidden" , padding:"20px" ,margin:"20px", backgroundColor: "#5D6D7E"}}>
          <StyleForm></StyleForm>
+      <div style={{padding: "30px" ,overflow: "hidden" ,color: "white"}}>
+         Select City :: 
+         <select onChange={(e)=>setCity(e.target.value)}>
+              <option>Chennai</option>
+              <option>Mumbai</option>
+              <option>Hyderabad</option>
+              <option>Kolkata</option>
+              <option>Bengaluru</option>
+         </select>
+         <WeatherDataComponent city={city}></WeatherDataComponent>
       </div>
+    </div>
     </div>
   )
 }
