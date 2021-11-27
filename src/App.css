@@ -1,6 +1,5 @@
 h1{
-  background-color: yellow;
-  color: green;
+   color: rgb(88, 86, 86);
 }
 
 .box{
@@ -16,6 +15,13 @@ h1{
 .container1{
   padding: 30px;
   background-color: rgb(66, 64, 64);
+  color: white;
+  overflow: hidden;
+}
+
+.container2{
+  padding: 30px;
+  background-color: rgb(209, 207, 196);
   color: white;
   overflow: hidden;
 }
