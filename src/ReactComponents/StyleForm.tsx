@@ -41,6 +41,19 @@ const StyleForm=()=>{
                   Forms using Ref...<br/>
                   This is called uncontrolled component
            </p>
+           <table>
+                <tr>
+                       <th>Title</th>
+                       <td><input type="text"></input></td>
+                  </tr>
+                  <tr>
+                       <th>Description</th>
+                       <td>
+                           <textarea rows={5} cols={50}></textarea>
+                       </td>
+                  </tr>
+
+           </table>
         </div>
     )
 }
