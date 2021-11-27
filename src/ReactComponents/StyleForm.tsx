@@ -3,6 +3,8 @@ import { useState,useRef } from "react"
 const StyleForm=()=>{
     const [bgColor,setBgColor]=useState("#34495E")
     const [color,setColor]=useState("#F0F3F4")
+    const [title,setTitle]=useState("Wonderful React")
+    const [description,setDescription]=useState("Way to go .....")
 
     const bgData:any=useRef<HTMLInputElement>()
     const colorData:any=useRef<HTMLInputElement>()
@@ -35,21 +37,27 @@ const StyleForm=()=>{
                         /></td>
                   </tr>
             </table>
-            <h1>Wonderful React!!!</h1>
+            <h1>{title}</h1>
             <p>
-                  This particular component demonstrates how to deal with 
-                  Forms using Ref...<br/>
-                  This is called uncontrolled component
+                {description}
            </p>
            <table>
                 <tr>
                        <th>Title</th>
-                       <td><input type="text"></input></td>
+                       <td>
+                           <input type="text" 
+                           value={title}
+                           onChange={(e)=>{setTitle(e.target.value)}}
+                           ></input>
+                           </td>
                   </tr>
                   <tr>
                        <th>Description</th>
                        <td>
-                           <textarea rows={5} cols={50}></textarea>
+                           <textarea rows={5} cols={50}
+                           value={description}
+                           onChange={(e)=>{setDescription(e.target.value)}}
+                           ></textarea>
                        </td>
                   </tr>
 
