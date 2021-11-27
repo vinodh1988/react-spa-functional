@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 import Box from './Box';
+import StyleForm from './ReactComponents/StyleForm';
 
 const App=()=>{
   
@@ -31,7 +32,12 @@ const App=()=>{
       {
         titles.map(x=><Box key={x} title={x}></Box>)
       }  
+      
+    
     </div>
+    <div style={{overflow: "hidden" , margin:"20px"}}>
+         <StyleForm></StyleForm>
+      </div>
     </div>
   )
 }
