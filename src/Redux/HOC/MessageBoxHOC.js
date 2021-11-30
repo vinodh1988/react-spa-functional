@@ -5,7 +5,8 @@ import { MessageAction } from '../Actions/MessageAction'
 
 const mapStateToProps=(state)=>{
     return {
-        message: state.messageData.message
+        message: state.messageData.message,
+        runCount: state.currentRound.run
     }
 }
 

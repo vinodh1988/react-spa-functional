@@ -1,7 +1,7 @@
 
-export const firstReducer=(state=1)=>{
+export const firstReducer=(state={run:0})=>{
     return {
-        reducerRun: {run: state+1}
+         run: state.run+1
     }
 }
 
