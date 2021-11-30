@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import './App.css'
 import Box from './Box';
+import MessageBox from './ReactComponents/ReduxComponents/MessageBox';
+import ReduxRoot from './ReactComponents/ReduxComponents/ReduxRoot';
 import StyleForm from './ReactComponents/StyleForm';
 import WeatherDataComponent from './ReactComponents/WeatherData';
+import {Provider} from 'react-redux';
+import {store} from './Redux/Store/store'
 
 const App=()=>{
   
@@ -21,6 +25,12 @@ const App=()=>{
     <div>
       <h1>React World</h1>
       <br/>
+      <div className="redux-layer">
+          <h1>Redux Layer</h1>
+          <Provider store={store}>
+                 <ReduxRoot></ReduxRoot>
+          </Provider>
+      </div>
     <div className="alert alert-dark">
           <button className={button1} 
           onClick={()=>{changeTheme("container1")}}> 
