@@ -1,5 +1,7 @@
 import {connect} from 'react-redux'
+import { bindActionCreators } from 'redux'
 import MessageBox from '../../ReactComponents/ReduxComponents/MessageBox'
+import { MessageAction } from '../Actions/MessageAction'
 
 const mapStateToProps=(state)=>{
     return {
@@ -7,6 +9,11 @@ const mapStateToProps=(state)=>{
     }
 }
 
-const MessageBoxHOC=connect(mapStateToProps,null)(MessageBox)
+const mapActionToProps=(dispatch)=>{
+    return bindActionCreators({changeMessage:MessageAction},dispatch);
+    
+}
+
+const MessageBoxHOC=connect(mapStateToProps,mapActionToProps)(MessageBox)
 
 export default MessageBoxHOC

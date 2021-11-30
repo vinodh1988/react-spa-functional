@@ -8,7 +8,7 @@ export const firstReducer=(state=1)=>{
 export const messageReducer=(state={message:"Hello Redux!!!"},action)=>{
     switch(action.type){
          case "MESSAGE_ACTION":
-             return {messsage: action.data}
+             return {message: action.data}
          
          default:
              return state 
