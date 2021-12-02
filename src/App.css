@@ -35,7 +35,9 @@ h1{
 
 .reduxParent{
   background-color: rgb(250, 141, 121);
-  color: rgb(50, 50, 116);
+  color: rgb(6, 6, 37);
   padding: 30px;
   margin: 10px;
+  font-family: arial;
+  font-size: 20px;
 }

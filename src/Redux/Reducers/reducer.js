@@ -15,6 +15,16 @@ export const messageReducer=(state={message:"Hello Redux!!!"},action)=>{
     }
 }
 
+export const quoteReducer=(state={quote:"NA",author:"NA"},action)=>{
+    switch(action.type){
+        case "QUOTE_ACTION":
+            return action.data;
+        
+        default:
+            return state 
+   }
+}
+
 /**
  * Reducer- it is a function which return object
  *          It runs very first time regardless of any action and
