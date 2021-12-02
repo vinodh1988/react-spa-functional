@@ -5,6 +5,10 @@ const QuoteBox=({author,quote,getNewQuote}:any)=>{
               <p>
                  {quote} - {author}
               </p>
+              <button 
+              style={{width:"150px"}} 
+              className="btn btn-danger"
+              onClick={getNewQuote}>New Quote</button>
        </div>
    )
 }

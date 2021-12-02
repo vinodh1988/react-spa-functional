@@ -1,7 +1,9 @@
 
 
 import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
 import QuoteBox from '../../ReactComponents/ReduxComponents/QuoteBox';
+import { getQuoteFromAPI } from '../Actions/QuoteAction';
 
 
 const mapStateToProps =(state)=>{
@@ -11,6 +13,16 @@ const mapStateToProps =(state)=>{
     }
 }
 
-const QuoteBoxHOC= connect(mapStateToProps,null)(QuoteBox)
+const mapActionToProps = (dispatch)=>{
+    return bindActionCreators(
+        {
+            getNewQuote: ()=>{
+               return getQuoteFromAPI()
+            },
+        },dispatch);
+    
+}
+
+const QuoteBoxHOC= connect(mapStateToProps,mapActionToProps)(QuoteBox)
 
 export default QuoteBoxHOC
